@@ -91,7 +91,7 @@ hr {
     align-items: center;
   }
   #logo {
-    color: #57c586;
+    color: white;
     font-size: 20px;
     font-weight: 600;
   }
@@ -133,7 +133,9 @@ hr {
   cursor: pointer;
   display: none;
 }
-
+a {
+  color: white;
+}
 
 @media screen and (max-width: 600px) {
   #menu {

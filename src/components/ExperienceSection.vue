@@ -1,14 +1,15 @@
 <script setup>
+    import HeadContainer from '../components/HeadContainer.vue'
+    import {ref} from 'vue'
 
+    const title = ref(`[Skill & tools]`)
+    const subTitle = ref('My Toolbox & Things I Can Do')
+    const description = ref(`The skills, tools and technologies I use to bring your products to life:`)
 </script>
 <template>
     <div id="main">
         <section>
-            <div id="wrapper">
-                <h2>[Skill & tools]</h2>
-                <h3>My Toolbox & Things I Can Do</h3>
-                <p id="description"> The skills, tools and technologies I use to bring your products to life:</p>
-            </div>
+            <HeadContainer :title="title" :subTitle="subTitle" :description="description"/>
             <div id="cards">
                 <div class="card">
                     <div id="box">
@@ -101,24 +102,7 @@ section {
     animation-duration: 0.6s;
     animation-timing-function: ease;
 }
-#wrapper {
-    width: 100%;
-    height: auto;
 
-    display: flex;
-    flex-direction:column;
-    gap: 10px
-}
-#wrapper h2 {
-    color: #60d090;
-}
-#wrapper h3 {
-    color: #b5c1ed;
-}
-#description {
-    font-size: 14px;
-    color: #8990aa;
-}
 #cards {
     width: 100%;
     height: 100%;
@@ -170,15 +154,6 @@ a {
 @media screen and (max-width: 600px) {
     section {
         width: 100%;
-    }
-    #wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #wrapper h3 {
-        text-align: center;
-        font-size: 16px;
     }
     #description {
         width: 100%;
